@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named gbn
-
-# Build rule for target.
-gbn: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gbn
-.PHONY : gbn
-
-# fast build rule for target.
-gbn/fast:
-	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/build
-.PHONY : gbn/fast
-
-#=============================================================================
 # Target rules for targets named sr
 
 # Build rule for target.
@@ -135,6 +122,19 @@ sr: cmake_check_build_system
 sr/fast:
 	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/build
 .PHONY : sr/fast
+
+#=============================================================================
+# Target rules for targets named gbn
+
+# Build rule for target.
+gbn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gbn
+.PHONY : gbn
+
+# fast build rule for target.
+gbn/fast:
+	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/build
+.PHONY : gbn/fast
 
 #=============================================================================
 # Target rules for targets named sanchitb
@@ -182,7 +182,7 @@ src/gbn.o: src/gbn.cpp.o
 
 # target to build an object file
 src/gbn.cpp.o:
-	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/gbn.cpp.o
+	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/gbn.cpp.o
 .PHONY : src/gbn.cpp.o
 
 src/gbn.i: src/gbn.cpp.i
@@ -191,7 +191,7 @@ src/gbn.i: src/gbn.cpp.i
 
 # target to preprocess a source file
 src/gbn.cpp.i:
-	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/gbn.cpp.i
+	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/gbn.cpp.i
 .PHONY : src/gbn.cpp.i
 
 src/gbn.s: src/gbn.cpp.s
@@ -200,7 +200,7 @@ src/gbn.s: src/gbn.cpp.s
 
 # target to generate assembly for a file
 src/gbn.cpp.s:
-	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/gbn.cpp.s
+	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/gbn.cpp.s
 .PHONY : src/gbn.cpp.s
 
 src/simulator.o: src/simulator.cpp.o
@@ -209,8 +209,8 @@ src/simulator.o: src/simulator.cpp.o
 
 # target to build an object file
 src/simulator.cpp.o:
-	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/simulator.cpp.o
 	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/simulator.cpp.o
+	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/simulator.cpp.o
 	$(MAKE) -f CMakeFiles/sanchitb.dir/build.make CMakeFiles/sanchitb.dir/src/simulator.cpp.o
 .PHONY : src/simulator.cpp.o
 
@@ -220,8 +220,8 @@ src/simulator.i: src/simulator.cpp.i
 
 # target to preprocess a source file
 src/simulator.cpp.i:
-	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/simulator.cpp.i
 	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/simulator.cpp.i
+	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/simulator.cpp.i
 	$(MAKE) -f CMakeFiles/sanchitb.dir/build.make CMakeFiles/sanchitb.dir/src/simulator.cpp.i
 .PHONY : src/simulator.cpp.i
 
@@ -231,8 +231,8 @@ src/simulator.s: src/simulator.cpp.s
 
 # target to generate assembly for a file
 src/simulator.cpp.s:
-	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/simulator.cpp.s
 	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/simulator.cpp.s
+	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/simulator.cpp.s
 	$(MAKE) -f CMakeFiles/sanchitb.dir/build.make CMakeFiles/sanchitb.dir/src/simulator.cpp.s
 .PHONY : src/simulator.cpp.s
 
@@ -242,7 +242,7 @@ src/sr.o: src/sr.cpp.o
 
 # target to build an object file
 src/sr.cpp.o:
-	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/sr.cpp.o
+	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/sr.cpp.o
 .PHONY : src/sr.cpp.o
 
 src/sr.i: src/sr.cpp.i
@@ -251,7 +251,7 @@ src/sr.i: src/sr.cpp.i
 
 # target to preprocess a source file
 src/sr.cpp.i:
-	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/sr.cpp.i
+	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/sr.cpp.i
 .PHONY : src/sr.cpp.i
 
 src/sr.s: src/sr.cpp.s
@@ -260,7 +260,7 @@ src/sr.s: src/sr.cpp.s
 
 # target to generate assembly for a file
 src/sr.cpp.s:
-	$(MAKE) -f CMakeFiles/gbn.dir/build.make CMakeFiles/gbn.dir/src/sr.cpp.s
+	$(MAKE) -f CMakeFiles/sr.dir/build.make CMakeFiles/sr.dir/src/sr.cpp.s
 .PHONY : src/sr.cpp.s
 
 # Help Target
@@ -271,8 +271,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... gbn"
 	@echo "... sr"
+	@echo "... gbn"
 	@echo "... sanchitb"
 	@echo "... src/abt.o"
 	@echo "... src/abt.i"

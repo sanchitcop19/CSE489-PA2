@@ -57,18 +57,18 @@ include CMakeFiles/sr.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sr.dir/flags.make
 
-CMakeFiles/sr.dir/src/gbn.cpp.o: CMakeFiles/sr.dir/flags.make
-CMakeFiles/sr.dir/src/gbn.cpp.o: ../src/gbn.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sr.dir/src/gbn.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sr.dir/src/gbn.cpp.o -c /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/gbn.cpp
+CMakeFiles/sr.dir/src/sr.cpp.o: CMakeFiles/sr.dir/flags.make
+CMakeFiles/sr.dir/src/sr.cpp.o: ../src/sr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sr.dir/src/sr.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sr.dir/src/sr.cpp.o -c /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/sr.cpp
 
-CMakeFiles/sr.dir/src/gbn.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sr.dir/src/gbn.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/gbn.cpp > CMakeFiles/sr.dir/src/gbn.cpp.i
+CMakeFiles/sr.dir/src/sr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sr.dir/src/sr.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/sr.cpp > CMakeFiles/sr.dir/src/sr.cpp.i
 
-CMakeFiles/sr.dir/src/gbn.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sr.dir/src/gbn.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/gbn.cpp -o CMakeFiles/sr.dir/src/gbn.cpp.s
+CMakeFiles/sr.dir/src/sr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sr.dir/src/sr.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/sr.cpp -o CMakeFiles/sr.dir/src/sr.cpp.s
 
 CMakeFiles/sr.dir/src/simulator.cpp.o: CMakeFiles/sr.dir/flags.make
 CMakeFiles/sr.dir/src/simulator.cpp.o: ../src/simulator.cpp
@@ -85,13 +85,13 @@ CMakeFiles/sr.dir/src/simulator.cpp.s: cmake_force
 
 # Object files for target sr
 sr_OBJECTS = \
-"CMakeFiles/sr.dir/src/gbn.cpp.o" \
+"CMakeFiles/sr.dir/src/sr.cpp.o" \
 "CMakeFiles/sr.dir/src/simulator.cpp.o"
 
 # External object files for target sr
 sr_EXTERNAL_OBJECTS =
 
-sr: CMakeFiles/sr.dir/src/gbn.cpp.o
+sr: CMakeFiles/sr.dir/src/sr.cpp.o
 sr: CMakeFiles/sr.dir/src/simulator.cpp.o
 sr: CMakeFiles/sr.dir/build.make
 sr: CMakeFiles/sr.dir/link.txt

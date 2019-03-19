@@ -8,21 +8,9 @@
 
 /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
 
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/simulator.cpp
-stdio.h
--
-stdlib.h
--
-getopt.h
--
-ctype.h
--
-string.h
--
+/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/gbn.cpp
 ../include/simulator.h
 /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
-
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/sr.cpp
-../include/simulator.h
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
+queue
+-
 

@@ -13,7 +13,7 @@ add_executable(sanchitb
         abt
         )
 
-add_executable(sr
+add_executable(gbn
         include/simulator.h
         src/gbn.cpp
         src/simulator.cpp
@@ -21,7 +21,7 @@ add_executable(sr
         )
 
 
-add_executable(gbn
+add_executable(sr
         include/simulator.h
         src/sr.cpp
         src/simulator.cpp

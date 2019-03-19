@@ -37,52 +37,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="gbn">
-				<Option output="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/gbn" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/."/>
-					<Add directory="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 gbn"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gbn/fast">
-				<Option output="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/gbn" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/."/>
-					<Add directory="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 gbn/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="sr">
 				<Option output="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/sr" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug"/>
@@ -124,6 +78,52 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 sr/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gbn">
+				<Option output="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/gbn" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/."/>
+					<Add directory="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 gbn"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gbn/fast">
+				<Option output="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/gbn" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/."/>
+					<Add directory="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 gbn/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -180,29 +180,29 @@
 			<Option target="sanchitb"/>
 		</Unit>
 		<Unit filename="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/gbn">
-			<Option target="sr"/>
+			<Option target="gbn"/>
 		</Unit>
 		<Unit filename="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h">
-			<Option target="gbn"/>
 			<Option target="sr"/>
+			<Option target="gbn"/>
 			<Option target="sanchitb"/>
 		</Unit>
 		<Unit filename="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/sr">
-			<Option target="gbn"/>
+			<Option target="sr"/>
 		</Unit>
 		<Unit filename="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/abt.cpp">
 			<Option target="sanchitb"/>
 		</Unit>
 		<Unit filename="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/gbn.cpp">
-			<Option target="sr"/>
+			<Option target="gbn"/>
 		</Unit>
 		<Unit filename="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/simulator.cpp">
-			<Option target="gbn"/>
 			<Option target="sr"/>
+			<Option target="gbn"/>
 			<Option target="sanchitb"/>
 		</Unit>
 		<Unit filename="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/sr.cpp">
-			<Option target="gbn"/>
+			<Option target="sr"/>
 		</Unit>
 		<Unit filename="/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

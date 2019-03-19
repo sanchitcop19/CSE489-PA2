@@ -2,7 +2,6 @@
 #include "../include/simulator.h"
 #include <time.h>
 #include <cstring>
-#include <chrono>
 #include <cstdlib>
 #include <string>
 #include <vector>
@@ -22,7 +21,6 @@ int checksum(struct pkt packet){
     int sum = 0;
     sum += (packet.seqnum + packet.acknum);
 
-    // TODO: strlen an issue?
     for (int i = 0; i < 20; ++i){
         sum += (int)packet.payload[i];
     }
@@ -51,7 +49,6 @@ void A_output(struct msg message)
 
     if (!acked) {
         buffer.push(message);
-        printf("%s\n", buffer.front().data);
         return;
     }
     struct pkt packet = pkt();
@@ -126,9 +123,11 @@ void B_input(struct pkt packet)
     ack.acknum = packet.seqnum;
     ack.seqnum = 0;
     ack.checksum = ack.acknum+ack.seqnum;
-    if (expectedb == packet.seqnum) {tolayer5(1, (char*)packet.payload);expectedb = !expectedb;}
+    if (expectedb == packet.seqnum) {
+        tolayer5(1, (char*)packet.payload);
+        expectedb = !expectedb;
+    }
     tolayer3(1, ack);
-
 
 }
 
