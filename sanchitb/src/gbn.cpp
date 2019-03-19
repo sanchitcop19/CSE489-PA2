@@ -74,7 +74,10 @@ void A_input(struct pkt packet)
     if (verify_checksum(packet)){
         send_base = packet.acknum + 1;
         if (send_base == next_seqnum) stoptimer(0);
-        else starttimer(0, EXPIRE);
+        else {
+            stoptimer(0);
+            starttimer(0, EXPIRE);
+        }
     }
 }
 
