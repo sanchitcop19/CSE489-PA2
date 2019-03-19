@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
+
+/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/gbn.cpp
+../include/simulator.h
+/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
+
+/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/simulator.cpp
+stdio.h
+-
+stdlib.h
+-
+getopt.h
+-
+ctype.h
+-
+string.h
+-
+../include/simulator.h
+/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
+
