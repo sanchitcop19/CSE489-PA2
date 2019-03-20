@@ -162,13 +162,14 @@ void B_input(struct pkt packet) {
         tolayer5(1, packet.payload);
         expectedb++;
     }
-    printf("Received duplicate packet, sending ack: %i\n", packet.seqnum);
+if (packet.seqnum <= expectedb){
+    printf("Received packet, sending ack: %i\n", packet.seqnum);
     struct pkt ack = pkt();
     ack.seqnum = 0;
     ack.acknum = packet.seqnum;
     ack.checksum = checksum(ack);
     tolayer3(1, ack);
-}
+}}
 
 /* the following rouytine will be called once (only) before any other */
 /* entity B routines are called. You can use it to do any initialization */
