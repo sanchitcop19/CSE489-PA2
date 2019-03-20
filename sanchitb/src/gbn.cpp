@@ -96,10 +96,11 @@ void A_output(struct msg message) {
 void A_input(struct pkt packet) {
     std::cout << "------------A-input-begin-------------" << std::endl;
     if (!unacked.empty())std::cout << "A_input called, unacked:" << to_string2(unacked.front().seqnum) << std::endl;
-    if (verify_checksum(packet) && packet.acknum >= send_base){
+    printf("receiving ack for : %i\n", packet.acknum);
+	if (verify_checksum(packet) && packet.acknum >= send_base){
         send_base = packet.acknum + 1;
         printf("moving base to : %i\n", send_base);
-	unacked.pop();
+	while(!unacked.empty() && unacked.front().seqnum < send_base) unacked.pop();
 	printf("popped unacked\n");
         if (send_base == next) {
 	printf("next: %i\n", next);
