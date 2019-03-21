@@ -37,6 +37,7 @@ bool verify_checksum(struct pkt packet){
     for (int i = 0; i < 20; ++i){
         sum += (int)packet.payload[i];
     }
+	printf("sum: %i, checksum: %i\n", sum, packet.checksum);
     return sum == packet.checksum;
 }
 int counter = 0;
@@ -127,6 +128,7 @@ void A_input(struct pkt packet) {
         }
 
     }
+else printf("received corrupted packet\n");
     std::cout << "------------A-input-end-------------" << std::endl;
 }
 
@@ -158,7 +160,8 @@ void A_init() {
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet) {
     std::cout << "------------B-input-------------" << std::endl;
-    if (verify_checksum(packet) and (packet.seqnum == expectedb)){
+    if (!verify_checksum(packet))return;
+	if ((packet.seqnum == expectedb)){
         std::cout << "received expected packet, delivering to layer 5: " << to_string2(expectedb) << std::endl;
         tolayer5(1, packet.payload);
         expectedb++;

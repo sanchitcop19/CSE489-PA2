@@ -581,7 +581,7 @@ void tolayer3(int AorB,struct pkt packet)
 
  /* simulate corruption: */
  if (jimsrand() < corruptprob)  {
-     std::cout << "corrupting packet: " << to_string(packet.seqnum) << std::endl;
+     std::cout << "corrupting packet: seqnum-> " << to_string(packet.seqnum) << "   acknum->" << to_string(packet.acknum) << std::endl;
     ncorrupt++;
     if ( (x = jimsrand()) < .75)
        mypktptr->payload[0]='Z';   /* corrupt payload */
