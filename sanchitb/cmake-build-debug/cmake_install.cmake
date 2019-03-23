@@ -1,4 +1,4 @@
-# Install script for directory: /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb
+# Install script for directory: /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

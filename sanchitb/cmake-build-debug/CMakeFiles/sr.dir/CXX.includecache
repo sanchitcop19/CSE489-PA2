@@ -6,23 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
+/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/include/simulator.h
 
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/gbn.cpp
+/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/sr.cpp
 ../include/simulator.h
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
-
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/simulator.cpp
-stdio.h
+/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/include/simulator.h
+queue
 -
-stdlib.h
+utility
 -
-getopt.h
+iostream
 -
-ctype.h
+algorithm
+-
+cstdio
 -
 string.h
 -
-../include/simulator.h
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
+string
+-
+cassert
+-
 

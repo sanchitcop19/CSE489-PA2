@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb
+CMAKE_SOURCE_DIR = /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sanchitb.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/sanchitb.dir/flags.make
 
 CMakeFiles/sanchitb.dir/src/abt.cpp.o: CMakeFiles/sanchitb.dir/flags.make
 CMakeFiles/sanchitb.dir/src/abt.cpp.o: ../src/abt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sanchitb.dir/src/abt.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sanchitb.dir/src/abt.cpp.o -c /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/abt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sanchitb.dir/src/abt.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sanchitb.dir/src/abt.cpp.o -c /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/abt.cpp
 
 CMakeFiles/sanchitb.dir/src/abt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sanchitb.dir/src/abt.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/abt.cpp > CMakeFiles/sanchitb.dir/src/abt.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/abt.cpp > CMakeFiles/sanchitb.dir/src/abt.cpp.i
 
 CMakeFiles/sanchitb.dir/src/abt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sanchitb.dir/src/abt.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/abt.cpp -o CMakeFiles/sanchitb.dir/src/abt.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/abt.cpp -o CMakeFiles/sanchitb.dir/src/abt.cpp.s
 
 CMakeFiles/sanchitb.dir/src/simulator.cpp.o: CMakeFiles/sanchitb.dir/flags.make
 CMakeFiles/sanchitb.dir/src/simulator.cpp.o: ../src/simulator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sanchitb.dir/src/simulator.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sanchitb.dir/src/simulator.cpp.o -c /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/simulator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sanchitb.dir/src/simulator.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sanchitb.dir/src/simulator.cpp.o -c /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/simulator.cpp
 
 CMakeFiles/sanchitb.dir/src/simulator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sanchitb.dir/src/simulator.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/simulator.cpp > CMakeFiles/sanchitb.dir/src/simulator.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/simulator.cpp > CMakeFiles/sanchitb.dir/src/simulator.cpp.i
 
 CMakeFiles/sanchitb.dir/src/simulator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sanchitb.dir/src/simulator.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/simulator.cpp -o CMakeFiles/sanchitb.dir/src/simulator.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/simulator.cpp -o CMakeFiles/sanchitb.dir/src/simulator.cpp.s
 
 # Object files for target sanchitb
 sanchitb_OBJECTS = \
@@ -95,7 +95,7 @@ sanchitb: CMakeFiles/sanchitb.dir/src/abt.cpp.o
 sanchitb: CMakeFiles/sanchitb.dir/src/simulator.cpp.o
 sanchitb: CMakeFiles/sanchitb.dir/build.make
 sanchitb: CMakeFiles/sanchitb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable sanchitb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable sanchitb"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sanchitb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/sanchitb.dir/clean:
 .PHONY : CMakeFiles/sanchitb.dir/clean
 
 CMakeFiles/sanchitb.dir/depend:
-	cd /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug /Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/cmake-build-debug/CMakeFiles/sanchitb.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug /Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/cmake-build-debug/CMakeFiles/sanchitb.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sanchitb.dir/depend
 

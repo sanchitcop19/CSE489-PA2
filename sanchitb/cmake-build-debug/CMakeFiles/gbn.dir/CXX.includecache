@@ -6,15 +6,45 @@
 
 #IncludeRegexTransform: 
 
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
+/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/include/simulator.h
 
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/src/gbn.cpp
+/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/gbn.cpp
 ../include/simulator.h
-/Users/SanchitBatra/Desktop/Projects/CSE489/a2/sanchitb/include/simulator.h
+/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/include/simulator.h
 queue
 -
 iostream
 -
 algorithm
 -
+cstdio
+-
+string.h
+-
+string
+-
+cassert
+-
+
+/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/src/simulator.cpp
+stdio.h
+-
+stdlib.h
+-
+getopt.h
+-
+ctype.h
+-
+string.h
+-
+iostream
+-
+cstdio
+-
+string
+-
+cassert
+-
+../include/simulator.h
+/Users/SanchitBatra/Desktop/Projects/CSE489/cse489a2/sanchitb/include/simulator.h
 
