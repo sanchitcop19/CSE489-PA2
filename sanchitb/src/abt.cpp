@@ -8,7 +8,7 @@
 #include <queue>
 
 using namespace std;
-#define EXPIRE 25.0f
+#define EXPIRE 15.0f
 
 struct pkt current_packet = pkt();
 std::queue<struct msg> buffer;

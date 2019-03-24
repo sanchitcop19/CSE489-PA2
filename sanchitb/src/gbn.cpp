@@ -19,7 +19,7 @@ std::string to_string2( int x ) {
 }
 
 
-#define EXPIRE 25.0f
+#define EXPIRE 30.0f
 
 int checksum(struct pkt packet){
 
