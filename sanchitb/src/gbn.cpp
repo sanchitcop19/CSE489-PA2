@@ -38,7 +38,7 @@ bool verify_checksum(struct pkt packet){
     for (int i = 0; i < 20; ++i){
         sum += (int)packet.payload[i];
     }
-	printf("sum: %i, checksum: %i\n", sum, packet.checksum);
+	//std::cout("sum: %i, checksum: %i\n", sum, packet.checksum);
     return sum == packet.checksum;
 }
 int counter = 0;
@@ -68,54 +68,52 @@ struct pkt current = pkt();
 
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message) {
-    std::cout << "------------A-output-begin-------------" << std::endl;
-    if (!unacked.empty())std::cout << "A_output called, unacked:" << to_string2(unacked.front().seqnum) << std::endl;
+    //std::cout << "------------A-output-begin-------------" << std::endl;
     struct pkt packet = pkt();
     packet.seqnum = counter++;
     strncpy(packet.payload, message.data, 20);
     packet.checksum = checksum(packet);
     current = packet;
     if (next < (send_base + window) and buffer.empty()){
-        std::cout << "sending packet: " << packet.seqnum << std::endl;
+        //std::cout << "sending packet: " << packet.seqnum << std::endl;
         tolayer3(0, packet);
         unacked.push(packet);
         if (send_base == next){
-            std::cout << "starting timer" << std::endl;
+            //std::cout << "starting timer" << std::endl;
             starttimer(0, EXPIRE);
         }
         ++next;
     }
     else{
-        std::cout << "buffering packet: " << packet.seqnum << std::endl;
+        //std::cout << "buffering packet: " << packet.seqnum << std::endl;
         buffer.push(packet);
     }
 
-    std::cout << "------------A-output-end-------------" << std::endl;
+    //std::cout << "------------A-output-end-------------" << std::endl;
 
 }
 
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet) {
-    std::cout << "------------A-input-begin-------------" << std::endl;
-    if (!unacked.empty())std::cout << "A_input called, unacked:" << to_string2(unacked.front().seqnum) << std::endl;
-    printf("receiving ack for : %i\n", packet.acknum);
+    //std::cout << "------------A-input-begin-------------" << std::endl;
+    //std::cout("receiving ack for : %i\n", packet.acknum);
 	if (verify_checksum(packet) && packet.acknum >= send_base){
         send_base = packet.acknum + 1;
-        printf("moving base to : %i\n", send_base);
+        //std::cout("moving base to : %i\n", send_base);
 	while(!unacked.empty() && unacked.front().seqnum < send_base) unacked.pop();
-	printf("popped unacked\n");
+	//std::cout("popped unacked\n");
         if (send_base == next) {
-	printf("next: %i\n", next);
+	//std::cout("next: %i\n", next);
             stoptimer(0);
-		printf("stopped timer\n");
+		//std::cout("stopped timer\n");
 
             while (buffer.size() > 0 && next < send_base + window){
-		printf("next: %i\n", next);
+		//std::cout("next: %i\n", next);
                 tolayer3(0, buffer.front());
-                if (send_base == next) {starttimer(0, EXPIRE);printf("starting timer\n");}
+                if (send_base == next) starttimer(0, EXPIRE);//std::cout("starting timer\n");}
                 unacked.push(buffer.front());
-		printf("pushing %i to unacked from the buffer\n", buffer.front().seqnum);
-	printf("popping buffer\n");	
+		//std::cout("pushing %i to unacked from the buffer\n", buffer.front().seqnum);
+	//std::cout("popping buffer\n");	
                 buffer.pop();
                 ++next;
 
@@ -125,29 +123,29 @@ void A_input(struct pkt packet) {
             /*TODO: make sure this is correct*/
             stoptimer(0);
             starttimer(0, EXPIRE);
-		printf("stopped and restarted timer\n");
+		//std::cout("stopped and restarted timer\n");
         }
 
     }
-else printf("received corrupted packet\n");
-    std::cout << "------------A-input-end-------------" << std::endl;
+else{} //std::cout("received corrupted packet\n");
+    //std::cout << "------------A-input-end-------------" << std::endl;
 }
 
 /* called when A's timer goes off */
 void A_timerinterrupt() {
-    std::cout << "------------A-timerinterrupt-begin-------------" << std::endl;
-    if (!unacked.empty())std::cout << "A_timerinterrupt called, unacked:" << to_string2(unacked.front().seqnum) << std::endl;
+    //std::cout << "------------A-timerinterrupt-begin-------------" << std::endl;
+    if (!unacked.empty())//std::cout << "A_timerinterrupt called, unacked:" << to_string2(unacked.front().seqnum) << std::endl;
     starttimer(0, EXPIRE);
     int base = send_base;
 
     while (base < next){
-        std::cout << "resending packet: " << to_string2(unacked.front().seqnum)<< std::endl;
+        //std::cout << "resending packet: " << to_string2(unacked.front().seqnum)<< std::endl;
         tolayer3(0, unacked.front());
         unacked.push(unacked.front());
         unacked.pop();
         ++base;
     }
-    std::cout << "------------A-timerinterrupt-end-------------" << std::endl;
+    //std::cout << "------------A-timerinterrupt-end-------------" << std::endl;
 }  
 
 /* the following routine will be called once (only) before any other */
@@ -160,15 +158,15 @@ void A_init() {
 
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet) {
-    std::cout << "------------B-input-------------" << std::endl;
+    //std::cout << "------------B-input-------------" << std::endl;
     if (!verify_checksum(packet))return;
 	if ((packet.seqnum == expectedb)){
-        std::cout << "received expected packet, delivering to layer 5: " << to_string2(expectedb) << std::endl;
+        //std::cout << "received expected packet, delivering to layer 5: " << to_string2(expectedb) << std::endl;
         tolayer5(1, packet.payload);
         expectedb++;
     }
 if (packet.seqnum <= expectedb){
-    printf("Received packet, sending ack: %i\n", packet.seqnum);
+    //std::cout("Received packet, sending ack: %i\n", packet.seqnum);
     struct pkt ack = pkt();
     ack.seqnum = 0;
     ack.acknum = packet.seqnum;

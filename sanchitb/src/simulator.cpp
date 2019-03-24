@@ -3,20 +3,7 @@
 #include <getopt.h>
 #include <ctype.h>
 #include <string.h>
-#include <iostream>
-#include <cstdio>
-#include <string>
-#include <cassert>
 
-std::string to_string( int x ) {
-  int length = snprintf( NULL, 0, "%d", x );
-  assert( length >= 0 );
-  char* buf = new char[length + 1];
-  snprintf( buf, length + 1, "%d", x );
-  std::string str( buf );
-  delete[] buf;
-  return str;
-}
 #include "../include/simulator.h"
 
 /* Statistics */
@@ -324,7 +311,6 @@ int main(int argc, char **argv)
    B_init();
 
    while (1) {
-
         eventptr = evlist;            /* get next event to simulate */
         if (eventptr==NULL)
            goto terminate;
@@ -474,7 +460,6 @@ void stoptimer(int AorB)
  for (q=evlist; q!=NULL ; q = q->next)
     if ( (q->evtype==TIMER_INTERRUPT  && q->eventity==AorB) ) {
        /* remove this event */
-       std::cout << "stopping timer" << std::endl;
        if (q->next==NULL && q->prev==NULL)
              evlist=NULL;         /* remove first and only event on list */
           else if (q->next==NULL) /* end of list - there is one in front */
@@ -512,7 +497,7 @@ void starttimer(int AorB,float increment)
       printf("Warning: attempt to start a timer that is already started\n");
       return;
       }
-    std::cout << "successfully started timer" << std::endl;
+
 /* create future event for when timer goes off */
    evptr = (struct event *)malloc(sizeof(struct event));
    evptr->evtime =  time_local + increment;
@@ -538,7 +523,6 @@ void tolayer3(int AorB,struct pkt packet)
 
  /* simulate losses: */
  if (jimsrand() < lossprob)  {
-     std::cout << "losing packet: seqnum -> " << to_string(packet.seqnum) << "   acknum -> " << to_string(packet.acknum) << "  data: " << packet.payload << std::endl;
       nlost++;
       if (TRACE>0)
     printf("          TOLAYER3: packet being lost\n");
@@ -560,7 +544,7 @@ void tolayer3(int AorB,struct pkt packet)
         printf("%c",mypktptr->payload[i]);
     printf("\n");
    }
-    std::cout << "sent packet successfully: seqnum-> " << to_string(packet.seqnum) << "  acknum-> " << to_string(packet.acknum) << " payload -> " << (packet.payload) <<  std::endl;
+
 /* create future event for arrival of packet at the other side */
   evptr = (struct event *)malloc(sizeof(struct event));
   evptr->evtype =  FROM_LAYER3;   /* packet will pop out from layer3 */
@@ -581,7 +565,6 @@ void tolayer3(int AorB,struct pkt packet)
 
  /* simulate corruption: */
  if (jimsrand() < corruptprob)  {
-     std::cout << "corrupting packet: seqnum-> " << to_string(packet.seqnum) << "   acknum->" << to_string(packet.acknum) << std::endl;
     ncorrupt++;
     if ( (x = jimsrand()) < .75)
        mypktptr->payload[0]='Z';   /* corrupt payload */
@@ -632,7 +615,7 @@ void tolayer5(int AorB,char *datasent)
 
   application_msgs[cur_msg_recv].delivered = 1; // Mark delivered
   cur_msg_recv += 1;
-    std::cout << "delivered packet to layer 5: " << datasent << std::endl;
+
   if(AorB == 1) B_application += 1;
 }
 
